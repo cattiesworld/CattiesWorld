@@ -4,22 +4,23 @@
     <link rel="icon" type="image/x-icon" href="https://greedyallay.github.io/CattiesWorld/images/catcircle.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="contents">
         <div class="topbar">
-    <p class="title">Cattie's World</p>
-</div> <div class="background">
-    <iframe class="game" src="https://greedyallay.github.io/CattiesWorld/Alpha/CattiesWorldV0.97.2" style="border:0px" width="960" height="540"></iframe>
-    <br>
-    <div>
-    <img src="images/controls.png">
-    <a href="https://discord.gg/mVHKXvUgsn" target="_blank">
-    <img src="images/discord.png" alt="" >
-</a>
-</div>
-</div>
+            <p class="title">Cattie's World <span class="version">v0.97.2</span></p>
+        </div> 
+        <div class="background">
+            <iframe class="game" src="https://greedyallay.github.io/CattiesWorld/Alpha/CattiesWorldV0.97.2" style="border:0px" width="960" height="540"></iframe>
+            <br>
+            <div>
+                <img src="images/controls.png">
+                <a href="https://discord.gg/mVHKXvUgsn" target="_blank">
+                    <img src="images/discord.png" alt="" >
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -44,6 +45,14 @@
         font-size: 50px;
         margin: 0;
         padding: 30px;
+        display: inline-block;
+    }
+    .version {
+        font-family: 'Archivo', sans-serif;
+        font-size: 18px;
+        color: gray;
+        margin-left: 5px;
+        vertical-align: middle;
     }
     .background {
         height: 800px;
@@ -56,6 +65,5 @@
     }
     .game {
         margin: 0 auto;
-        
     }
 </style>
