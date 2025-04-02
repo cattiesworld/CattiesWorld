@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,103 +7,134 @@
     <link rel="icon" type="image/x-icon" href="https://greedyallay.github.io/CattiesWorld/images/catcircle.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Cattie's World">
     <meta property="og:description" content="A fun interactive box2D ragdoll game with funny gore.">
-    <meta property="og:image" content="greedyallay.github.io/CattiesWorld/images/catcircle.png">
-    <meta property="og:url" content="greedyallay.github.io/CattiesWorld">
+    <meta property="og:image" content="https://greedyallay.github.io/CattiesWorld/images/catcircle.png">
+    <meta property="og:url" content="https://greedyallay.github.io/CattiesWorld">
     <meta property="og:type" content="website">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4307350139896540"
-     crossorigin="anonymous"></script>
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4307350139896540" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #ff6666;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .contents {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .topbar {
+            background-color: rgb(221, 221, 221);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .version {
+            font-family: 'Archivo', sans-serif;
+            font-size: 18px;
+            color: gray;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .background {
+            background-color: rgb(248, 248, 248);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game {
+            border: none;
+            width: 960px;
+            height: 540px;
+        }
+
+        .big {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 25px;
+            background-color: rgb(196, 196, 196);
+            padding: 20px;
+            display: inline-block;
+            width: 50%;
+        }
+
+        .news {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .text {
+            text-align: left;
+            margin: 20px;
+        }
+
+        .gyat {
+            text-align: left;
+            padding-left: 15%;
+        }
+
+        /* Styling the textarea + button container */
+        .copy-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Adds space between textarea & button */
+            margin: 20px auto;
+        }
+
+        .leftstuff {
+            width: 50%;
+            height: 80px;
+            resize: none;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #333;
+            background: #fff;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .butt {
+            width: 80px; /* Square button */
+            height: 80px; /* Same height as textarea */
+            background-color: #444;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .butt:hover {
+            background-color: #666;
+        }
+    </style>
 </head>
 
-
-<style>
-    body {
-        background-color: #ff6666;
-        margin: 0;
-        padding: 0;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    .contents {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-        
-    }
-
-    .topbar {
-        background-color: rgb(221, 221, 221);
-        padding: 20px;
-        text-align: center;
-    }
-
-    .title {
-        font-family: 'Archivo Black', sans-serif;
-        font-size: 50px;
-        margin: 0;
-    }
-
-    .version {
-        font-family: 'Archivo', sans-serif;
-        font-size: 18px;
-        color: gray;
-        margin-left: 5px;
-        vertical-align: middle;
-    }
-
-    .background {
-        background-color: rgb(248, 248, 248);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .game {
-        border: none;
-        width: 960px;
-        height: 540px;
-    }
-
-    .controls {
-        margin-top: 20px;
-    }
-
-    .big {
-        font-family: 'Archivo Black', sans-serif;
-        font-size: 25px;
-        background-color: rgb(196, 196, 196);
-        padding: 20px;
-        display: inline-block;
-        width: 50%;
-    }
-    .news {
-        background-color: white;
-    }
-    .text {
-        text-align: left;
-        margin: 20px;
-        padding: 20px ;
-    }
-    .subtext {
-        color: gray;
-        font-size: 15px;
-    }
-    .boldtext {
-        text-align: left;
-        margin: 20px;
-        padding: 20px ;
-        font-weight: bold;
-        text-align: center;
-    }
-        #older-versions {
-            display: none;
-        }
-</style>
 <body>
     <div class="contents">
         <div class="topbar">
@@ -110,13 +143,44 @@
 
         <div class="background">
             <!-- <iframe class="game" src="https://en.wikipedia.org/wiki/Main_Page"></iframe> -->
-             <!-- this is for when i change the page every time i reload it wont lag the fuck out of my shitty pc -->
+            <!-- This is for when I change the page every time I reload, it won't lag my PC -->
         </div>
 
-        <div>
-            <div class="news"><p class="big">Putting this game on ur site</p><br><p class="text">
-                Sorry, you can't, have a nice day.
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                you can soon tho but u need my permission
-                <br><br>
+        <div class="news">
+            <p class="big">Putting this game on your site</p>
+
+            <h2 class="gyat">Step 1:</h2>
+            <p class="text">Copy this iframe:</p>
+
+            <div class="copy-container">
+                <textarea class="leftstuff" id="iframe" readonly>&lt;iframe class="game" src="https://demo.cattiesworld.nl"&gt;&lt;/iframe&gt;</textarea>
+                <button class="butt" onclick="copyToClipboard()">COPY</button>
+            </div>
+
+            <br>
+            <h2 class="gyat">Step 2:</h2>
+            <p class="text">Paste it on your site!</p>
+
+            <br><br>
+            <h2 class="gyat">It should look like this:</h2>
+            <iframe class="game" src="https://demo.cattiesworld.nl"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const textarea = document.getElementById("iframe");
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile compatibility
+            document.execCommand("copy");
+
+            // Change button text temporarily
+            const button = document.querySelector(".butt");
+            button.textContent = "Copied!";
+            setTimeout(() => {
+                button.textContent = "COPY";
+            }, 1500);
+        }
+    </script>
 </body>
+</html>
