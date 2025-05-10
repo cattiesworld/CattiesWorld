@@ -8,6 +8,11 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+#myDiv {
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+}
 .poll-iframe {
   position: absolute;
   top: 100px; /* Adjust as needed */
