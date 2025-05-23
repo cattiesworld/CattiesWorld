@@ -1,0 +1,146 @@
+/* Reset some basics */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ff6666; /* KEEP THIS */
+  color: #f0f0f0;
+}
+
+/* Content wrapper */
+.contents {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Top bar */
+.topbar {
+  background-color: #282828;
+  padding: 10px 20px;
+  border-bottom: 2px solid #7a7a7a; /* outer border only */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+}
+.version {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Game frame */
+.background {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 2px solid #7a7a7a; /* outer border only */
+}
+iframe.game {
+  width: 100%;
+  height: 500px;
+  border: none; /* no border here */
+  border-radius: 8px;
+}
+
+/* Poll iframe */
+.poll-iframe {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  max-width: 90vw;
+  z-index: 999;
+  background: #282828;
+  border: 2px solid #7a7a7a; /* outer border */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px #000;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.poll-iframe iframe {
+  width: 100%;
+  min-height: 200px;
+  border: none; /* no border */
+  display: block;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagestuff {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.pagestuff:hover {
+  transform: scale(1.1);
+}
+
+/* News and blocks */
+.news {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 2px solid #7a7a7a; /* outer border only */
+}
+
+.big {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.boldtext {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text,
+.subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fff;
+}
+
+/* Iframes inside content */
+iframe {
+  max-width: 100%;
+  border: none; /* NO BORDER on iframes */
+}
+
+/* Responsive YouTube & stats embeds */
+iframe[src*="youtube"],
+iframe[src*="stats"] {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 8px;
+  border: none; /* removed border here */
+}
+
+.goawayborders {
+  border-style: none;
+}
