@@ -1,0 +1,103 @@
+<style>
+    .title {
+        font-size: 50px;
+        font-family: Archivo Black;
+        margin: -5px;
+    }
+    .game {
+      padding: 10px; 
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+      transition: .1s;
+    }
+    .game:hover {
+      background-color: rgba(0, 0, 0, 0.185);
+      transition: .1s;
+      cursor: pointer;
+    }
+    #explore {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .cardname {
+      font-family: Archivo Black;
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+    .gameinfo {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .gameinfotag {
+      margin-right: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 3px;
+    }
+    .textbad {
+      color: rgb(214, 140, 28);
+    }
+    .textgood {
+      color: rgb(37, 94, 199);
+    }
+    .dotbad {
+      background-color: rgb(214, 140, 28);
+    }
+    .dotgood {
+      background-color: rgb(37, 94, 199);
+    }
+    .thumbnail {
+      width: calc(100% - 10px);
+      margin: 5px;
+      border-radius: 10px;
+    }
+</style>
+
+<p class="title">Cattie's World Home</p>
+
+<p class="text">Welcome to the official website of Cattie's World! Here you can find anything you need about Cattie's World! Ready to play some games?</p>
+<br><br>
+<div id="explore">
+
+    <div class="game" onclick="refreshPage('play')">
+    <img src="resources/cattiesworld.png" alt="s" class="thumbnail">
+    <p class="cardname">Cattie's World</p>
+    <p class="description">
+      Original version of Cattie's World
+    </p>
+    <div class="gameinfo">
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unoptimised</span>
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unstable</span>
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Ready to play!</span>
+    </div>
+  </div>
+
+  <!-- <div class="game">
+    <img src="resources/wip.svg" alt="s" class="thumbnail">
+    <p class="cardname">Cattie's World</p>
+    <p class="description">
+      Improved performance, stability and tons of new features!
+    </p>
+    <div class="gameinfo">
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Performant</span>
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Stable</span>
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unfinished</span>
+      </div>
+  </div> -->
+
+
+
+</div>
+
+
+<div id="poll">
+  <!-- <iframe class="poll-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="500px" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+</div>

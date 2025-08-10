@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cattie's World by Greedy Allay</title>
+    <link rel="icon" type="image/x-icon" href="https://greedyallay.github.io/CattiesWorld/images/catcircle.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Cattie's World">
+    <meta property="og:description" content="A fun interactive box2D ragdoll game with funny gore.">
+    <meta property="og:image" content="https://greedyallay.github.io/CattiesWorld/images/icon.png">
+    <meta property="og:url" content="https://greedyallay.github.io/CattiesWorld">
+    <meta property="og:type" content="website">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4307350139896540"
+     crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style.css">
+
+     <script>
+        function toggleSpoiler() {
+            let content = document.querySelector(".spoiler-content");
+            let button = document.querySelector(".spoiler-button");
+
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Hide the very fun surprise";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Show a very fun surprise";
+            }
+        }
+    </script>
+
+</head>
+    <script>
+        function toggleVersions() {
+            var olderVersions = document.getElementById("older-versions");
+            if (olderVersions.style.display === "none") {
+                olderVersions.style.display = "block";
+            } else {
+                olderVersions.style.display = "none";
+            }
+        }
+    </script>
+<body>
+
+    <div class="contents">
+        <div class="topbar">
+            <!-- <a href="https://www.cattiesworld.nl">
+            <img src="images/logo.png" class="logo"></img>
+        </a>
+            <button class="topbarbutton">Game</button>
+            <a href="history.html" class="">
+            <button class="topbarbutton">News</button>
+            </a><a href="community.html" class="">
+            <button class="topbarbutton">Comments</button>
+        </a> r-->
+<p class="title">Cattie's World <span class="version">v0.1.50 Pre-Release</span></p>
+</div> 
+<div class="background">
+    <iframe class="game" src="game.html"></iframe>
+     <div id="myDiv" class="poll-iframe">
+  Click to hide
+  <button onclick="hideDiv()">
+    hide
+  </button>
+  <iframe class="poll-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="20%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+            <!-- <iframe class="game" src="https://en.wikipedia.org/wiki/Main_Page"></iframe> -->
+             <!-- this is for when i change the page every time i reload it wont lag the fuck out of my shitty pc -->
+            <div class="controls">
+                <img class="pagestuff" src="images/controls.png" alt="Game Controls">
+                <a href="https://discord.gg/5NTJTPwSaH" target="_blank">
+                    <img class="pagestuff" src="images/discord.png" alt="Join our Discord">
+                </a>
+                <a href="https://github.com/GreedyAllay/CattiesWorld/wiki/Cattie's-Wiki" target="_blank">
+                    <img class="pagestuff" src="images/help.png" alt="How to play">
+                    <a href="iwanttoputthisgameonmysite.html" target="_blank">
+                        <img class="pagestuff" src="images/addtosite.png" alt="How to play">
+                    <a href="https://www.youtube.com/@catties-world" target="_blank">
+                        <img class="pagestuff" src="images/youtube.png" alt="How to play"> <br>
+                </a> <br>
+            </a>
+            </div>
+        </div>
+
+        <div>
+            <div class="news">
+                <!-- <p class="big">Download The App!</p><br> -->
+
+                <!-- <h2 class="boldtext">Cattie's World can now be downloaded as an app! This lets you play the game, even when you're offline!
+                    This version does not automatically update! <br>Launching this will show the game in your discord status!
+                </h2>
+                            <a href="https://drive.google.com/file/d/1tCarDFV3Kn_NBgOCjpjBnfuoi-C5UdYt/view?usp=sharing">I will make a proper button soon</a> -->
+            <div class="news"><p class="big">News (this wont be updated anymore)</p><br>
+                <h2>Cattie's World 2</h2>
+                <p class="text">
+                    As we've all clearly experienced, Cattie's World is probably one of the most glitchy, unoptimised games ever. After every update, it becomes laggier and laggier
+                    to the point that you cannot even run it normally on a decent computer, LET ALONE a mobile phone! And that while I was striving for it to be fully compatible with touchscreens.
+                    <br><br>
+                    But, as which might be clear to some of the more technical players, the code of the game... it is really, really messy. No seriously, have a look at the code! (<a href="https://studio.cattiesworld.nl/editor.html?project_url=https://mods.cattiesworld.nl/versions/0.1.49.6.pmp&offscreen&clones=Infinity&size=640x360">yes, you can!</a>)
+                    <br><br>
+                    Another limitation of the Cattie's World engine, is that everything is hardcoded. A ton of stuff, breaks com-plete-ly after only changing one ini mini teeni tiny thing.
+                    E.g. adding a new vehicle, or even changing some values can BREAK EVERYTHING.
+                    Add a vehicle? Want to torture yourself for 5+ hours trying to change all the object IDs in the code and probably forgetting a couple causing it to not work and make you say go fuck yourself and undo all that work?
+                    While this sounds pretty bad and, quite frankly, somewhat serious, don't fear, my kid <img src="images/troll.png" alt="" width="10px" height="10px">, as I have the golden solution to this very problem, that has been an option for all those 6+ months I've worked on it,
+                    and I never realised it was there until now.
+                    <br><br>
+                    Teleporting to the shadow realm by crushing your spine? Having parts of your blood float in literal air? Having your universe run at a slowly but surely 69 minutes per frame? Well, with
+                    the NEW and improved <span class="bold">CopyCat Engine</span> that's all over. <br>
+                    In all seriousness, the new "CopyCat" engine is what i called the engine i made that runs at the core of the game, which is basically a full rewrite of the entire game, focusing on pure performance, stability and being better in every way.
+                    it runs at a sweet sweet 150 fps in a decently filled level (as of now there's only building blocks no things like saws and stuff that would lag more).
+                    My goal is trying to have the game run at >60 fps on my old phone, and >120 on my PC, ensuring good performance on any computer.
+                    The game will (hopefully) be released on steam for probably something around 1 - 3 bucks (Since steam charges 100 bucks for uploading a single game I need a way to earn it back)
+                    Oh yeah and since I made this website back when I was absolutely dreadful at html I might even redo the entire site design!
+                    <br><br>
+                    You can follow the progress in my <a href="https://discord.gg/5NTJTPwSaH">Discord</a>
+                    <button class="spoiler-button" onclick="toggleSpoiler()">spoiler?</button>
+                    <div class="spoiler-content">
+                        hello yeah sorry you gotta join my discord server to see the development <a href="https://discord.gg/5NTJTPwSaH" target="_blank">discord</a>
+                    </div>
+                    <br><br>
+                </p>
+                 <a href="history.html">View older articles</a>
+                <br><br>
+                <div class="big">Stats</div><br><br>
+                <iframe width="420" height="315" src="https://stats.cattiesworld.nl" style="border:0px solid black; border-radius: 7px;"></iframe><br>
+                <!-- The entire project is open-source and the .pmp files can be found on my github <a href="https://github.com/GreedyAllay/CattiesWorld">here</a>. I would like you ask you to not run or host
+                any of the server software, unless you use a different server than I did. Opening these project files can be done here: <a>Penguinmod</a> -->
+                <div class="big">Trailer</div><br><br>
+                <p><iframe width="420" height="315" src="https://www.youtube.com/embed/G4UG8VqnM_0" title="Cattie's World Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+                </div>
+                <div class="big">Comments</div><br><br>
+                <iframe src="comments.html" width="1000" height="563" style="border:0px solid black; border-radius: 7px;"></iframe>
+                <!-- <div class="news"><p class="big">Main Versions</p><br> -->
+                <!-- <p class="text">
+                <p class="boldtext">Lightweigh Versions:</p>
+                <a href="Pre-Alpha/CattiesWorldV0.40.html">CattiesWorldV0.40 (no gore, no skins)</a><br>
+                for some reason i feel like the physics in this version feel nicer
+                <br><a href="Pre-Alpha/CattiesWorldV0.54.html">CattiesWorldV0.54 (no gore, only cat skin)</a><br>runs on LITERALLY everything, except for a €40 mp4 player with android (it does run but you can't play)
+                <br><a href="Pre-Alpha/CattiesWorldV0.76.html">CattiesWorldV0.76 (early on gore, only cat skin)</a><br>more modern, level browser does not work in this version anymore for some reason, and some older gore. Still looks good, though, only no decals sadly :(<br>
+                <a href="Alpha/CattiesWorldV0.98.html">CattiesWorldV0.98 (most modern old version, no themes)</a><br>
+                This version is the most stable and works well with online levels and older computers. Might not have all the bells and whistles the normal game has, but it is functional. And smaller in file size.
+                <p class="boldtext">Here some older versions:</p>
+		        <iframe src="versions.html" width="75%" height="300" style="border:0px solid black;"></iframe>
+                </p></div>
+                <br><br> -->
+
+                            <div class="news"><p class="big">Modding</p><br>
+                <h2>wait what?</h2>
+                <p class="text">
+                <br>Hosting mods on your own site is allowed, ONLY if it changes enough about the game (e.g. it adds a new character, vehicle, or has modified versions of the characters, make it yours!)<br>
+            What I'm trying to say, is that people must have a reason to play it over the original.
+        Submit mods through the <a href="https://docs.google.com/forms/d/e/1FAIpQLSefEmT9_0EylN0Vha__0fQiqsjr65D1GdCRLmA49ABHvCRgeQ/viewform?usp=header">Google Forms</a> and get added to the <a href="https://mods.cattiesworld.nl/">Official Mod List</a>!
+        </p>
+        <iframe src="https://mods.cattiesworld.nl" width="800px" height="700px">
+                    </div>
+                </p>
+                <div class="big">Special Thanks and Resources</div>
+                <p class="boldtext">Code and Art</p>
+                Hugo Bouquet, also known as <a href="https://www.youtube.com/@Greedy-Allay">Greedy Allay</a>
+                <p class="boldtext">Editor</p>
+                <a href="https://penguinmod.com/" target="_blank">Penguinmod</a>
+                <p class="boldtext">Music</p>
+                <a href="https://www.youtube.com/@KUBBIkthxbai" target="_blank">Kubbi</a> (intro music)<br>
+                <a href="https://www.youtube.com/channel/UCtMAuzGwnY2N5DMjICVF9Yw" target="_blank">Jules Gaia</a> (in-game music)<br>
+                <a href="https://www.youtube.com/@AdhesiveWombat" target="_blank">AdhesiveWombat</a> (skin selection menu)<br>
+                <p class="boldtext">Web Hosting</p>
+                <a href="https://github.com/" target="_blank">Github</a> (literally free web hosting lol)
+                <br><br>
+                <!-- <div class="big">Webrings</div><br>
+                <br>
+                <a href="https://floeperdefloep.eu/"><img class="webring" src="https://floeperdefloep.eu/files/media/other/floepicon.png"></a>
+                <a href="https://mrcatto.nl/"><img class="webring" src="https://mrcatto.nl/images/webring/mrcatto.png"></a>
+            </p></div> -->
+        </div>
+        ©2025 Greedy Allay
+    </div>
+<script>
+      function hideDiv() {
+    document.getElementById("myDiv").style.display = "none";
+  }
+</script>
+<!-- this kind of fucks with googles search fuckery and shows a shit ton of images -->
+
+</body>
+</html>
