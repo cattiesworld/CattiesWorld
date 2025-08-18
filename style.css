@@ -102,3 +102,9 @@ button:hover {
     background-color: white;
     padding: 5px;
 }
+.topbutton:active {
+    transform: scale(.95);
+}
+button:active {
+    transform: scale(.95);  
+}
