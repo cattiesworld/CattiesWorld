@@ -15,7 +15,6 @@
     </div>
     <div id="topbar">
     </div>
-
   <script>
     const url = new URL(window.location.href);
     const params = url.searchParams;
@@ -94,6 +93,9 @@
         .then(page => {
             console.log('result')
             inject.innerHTML = page
+                const script = document.createElement('script')
+                script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/html-embed'
+                document.body.appendChild(script)
         })
         .catch(err => {
             console.log(`that doesn't seem to exist hehe`)
