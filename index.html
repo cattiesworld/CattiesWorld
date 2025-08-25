@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Cattie's World</title>
   <link href="style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
     </div>
     <div id="topbar">
     </div>
+    <div id="performancemode" style="margin-left: 20px;">cw2 coming soon</div>
   <script>
     const url = new URL(window.location.href);
     const params = url.searchParams;
@@ -25,6 +26,12 @@
     }
 
     function createBackgroundDooDoo() {
+        if(!document.getElementById('bgfx')) {
+            const la = document.createElement('div')
+            la.id = 'bgfx'
+            document.body.appendChild(la)
+
+        }
         for(let i = 0; i < 100; i++) {
         const circle = document.createElement('div')
         circle.style.backgroundColor = "green"
@@ -71,6 +78,16 @@
         }
     }
 
+    function togglePerformanceMode() {
+            localStorage.setItem('performance', !localStorage.getItem("performance"))
+
+        if(localStorage.getItem('performance')) {
+            document.getElementById('bgfx').remove()
+        } else {
+
+        }
+    }
+
     generateTopButtons()
 
     function refreshPage(page) {
@@ -101,6 +118,7 @@
             console.log(`that doesn't seem to exist hehe`)
             inject.textContent = "404 Error. Might be your internet?"
         })
+
     }
 
     const topbuttons = document.getElementsByClassName('topbutton')
@@ -115,6 +133,28 @@
             thisButton.style.backgroundColor = ''
             thisButton.style.color = ''
         }
+    }
+
+    if(page == 'home') {
+        document.title = "Home - Cattie's World"
+    } else 
+    if(page == 'play') {
+        document.title = "Playing Cattie's World"
+    } else 
+    if(page == 'news') {
+        document.title = "News - Cattie's World"
+    } else 
+    if(page == 'comments') {
+        document.title = "Comments - Cattie's World"
+    } else 
+    if(page == 'stats') {
+        document.title = "Statistics - Cattie's World"
+    } else 
+    if(page == 'trailer') {
+        document.title = "Trailer - Cattie's World"
+    } else 
+    if(page == 'mods') {
+        document.title = "Mods - Cattie's World"
     }
     }
 
