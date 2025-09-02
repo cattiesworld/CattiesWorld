@@ -15,6 +15,13 @@
     </div>
     <div id="topbar">
     </div>
+    <div id="notice" onclick="window.location = `https://discord.gg/vrgzWqDbBc`; document.getElementById('notice').innerHTML = '<span>Loading...</span>'">
+        <span>Cattie's World 2 is currently work in progress!! Follow the development on my Discord server!</span>
+        <br>
+        <span class="subtext">The new game is a completel rewrite featuring hugely improved performance, stability, and a ton of new things like minigames, and soon a playground</span>
+        <br>
+        <span class="subtext">Suggestions are welcome, and Discord members get to play new experimental versions first!</span>
+    </div>
     <div id="performancemode" style="margin-left: 20px;">cw2 coming soon</div>
   <script>
     const url = new URL(window.location.href);
@@ -26,12 +33,6 @@
     }
 
     function createBackgroundDooDoo() {
-        if(!document.getElementById('bgfx')) {
-            const la = document.createElement('div')
-            la.id = 'bgfx'
-            document.body.appendChild(la)
-
-        }
         for(let i = 0; i < 100; i++) {
         const circle = document.createElement('div')
         circle.style.backgroundColor = "green"
