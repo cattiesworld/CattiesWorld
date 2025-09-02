@@ -124,7 +124,7 @@ button:active {
     border-width: 1px;
     transition: .1s;
     margin-left: auto;
-    max-height: 40px;
+
 }
 #notice:hover {
     cursor: pointer;
@@ -135,5 +135,5 @@ button:active {
 }
 .subtext {
     color: rgb(189, 189, 189);
-    font-size: 15px;
+    font-size: 13px;
 }
