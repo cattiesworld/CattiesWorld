@@ -1,7 +1,0 @@
-(function(Scratch) {
-    const test = "number ";
-    let number = 69;
-
-    function test()
-
-})(Scratch);

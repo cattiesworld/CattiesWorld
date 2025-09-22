@@ -1,0 +1,150 @@
+<style>
+    .title {
+        font-size: 50px;
+        font-family: Archivo Black;
+        margin: -5px;
+    }
+    .game {
+      padding: 10px; 
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+      transition: .1s;
+    }
+    .game:hover {
+      /* background-color: rgba(0, 0, 0, 0.185); */
+      transition: .1s;
+      cursor: pointer;
+      filter: brightness(1.3);
+    }
+    #explore {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .cardname {
+      font-family: Archivo Black;
+      margin-top: -5px;
+      margin-bottom: -5px;
+      margin-left: 6px;
+    }
+    .gameinfo {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 6px;
+    }
+    .gameinfotag {
+      margin-right: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 3px;
+    }
+    .textbad {
+      color: rgb(255, 120, 120);
+    }
+    .textgood {
+      color: hwb(204 45% 0%);
+    }
+    .dotbad {
+      background-color: rgb(255, 120, 120);
+    }
+    .dotgood {
+      background-color: hwb(204 45% 0%);
+    }
+    .thumbnail {
+      width: calc(100% - 10px);
+      margin: 5px;
+      border-radius: 10px;
+    }
+    .smolltitle {
+      font-family: Archivo Black;
+      font-size: 40px;
+      margin-bottom: -20px;
+    }
+    .description {
+      margin-left: 6px;
+
+    }
+    .game:active {
+      transform: scale(.95);  
+      filter: brightness(.75);
+    }
+</style>
+
+<p class="title">Cattie's World Home</p>
+
+<p class="text">Welcome to the official website of Cattie's World! Here you can find anything you need about Cattie's World! Ready to play some games?</p>
+<br><br>
+<p class="smolltitle" style="margin-top: -20px; margin-bottom: 10px;">Play</p>
+<div id="explore">
+  <div class="game" onclick="refreshPage('play')">
+    <img src="resources/cattiesworld1.png" alt="s" class="thumbnail">
+    <p class="cardname">Cattie's World</p>
+    <p class="description">
+      Original version of Cattie's World
+    </p>
+    <!-- <div class="gameinfo">
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unoptimised</span>
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unstable</span>
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Ready to play!</span>
+    </div> -->
+  </div>
+    <div class="game" onclick="refreshPage('beta')">
+    <img src="resources/cattiesworld2.png" alt="s" class="thumbnail" style="filter: grayscale(1);">
+    <p class="cardname">Cattie's World 2 BETA</p>
+    <p class="description">
+      Highly optimised and stable rewrite of Cattie's World. (Work is in progress)
+    </p>
+    <div class="gameinfo">
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Work in progress!</span>
+    </div>
+  </div>
+    <div class="game" onclick="refreshPage('news')">
+      <img src="resources/news.png" alt="s" class="thumbnail">
+      <p class="cardname">News</p>
+      <p class="description" id="homenews">
+        Keep track of important information regarding the game
+      </p>
+    </div>
+      <div class="game" onclick="window.open('https\://discord.gg/5ZAa76x2RT')">
+      <img src="resources/discord.png" alt="s" class="thumbnail">
+      <p class="cardname">Discord Server!</p>
+      <p class="description" id="homenews">
+        Keep track of the latest updates and share fun gameplay!
+      </p>
+    </div>
+
+    </div>
+    <hr>
+
+<p class="smolltitle">Cattie's World 2 is under construction!</p>
+<p class="text">Follow my progress</p>
+<a class="smolltitle" style="color: red;" href="https://discord.gg/5ZAa76x2RT">HERE!!</a>
+
+  <!-- <div class="game">
+    <img src="resources/wip.svg" alt="s" class="thumbnail">
+    <p class="cardname">Cattie's World</p>
+    <p class="description">
+      Improved performance, stability and tons of new features!
+    </p>
+    <div class="gameinfo">
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Performant</span>
+      <span class="gameinfotag textgood"><div class="dot dotgood"></div> Stable</span>
+      <span class="gameinfotag textbad"><div class="dot dotbad"></div> Unfinished</span>
+      </div>
+  </div> -->
+
+
+
+</div>
+
+
+<div id="poll">
+  <!-- <iframe class="poll-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="500px" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+</div>
