@@ -30,10 +30,9 @@
                 button.textContent = "Show a very fun surprise";
             }
         }
-    </script>
-
-</head>
-    <script>
+        function hideDiv() {
+            document.getElementById("myDiv").style.display = "none";
+        }
         function toggleVersions() {
             var olderVersions = document.getElementById("older-versions");
             if (olderVersions.style.display === "none") {
@@ -42,9 +41,17 @@
                 olderVersions.style.display = "none";
             }
         }
+        let seenNotice = document.getElementById('noticetext').textContent
+        alert(seenNotice)
     </script>
-<body>
+</head>
 
+
+<body>
+    <div id="notice">
+        <span id="noticetext">Cattie's World 2 is in development! Follow it on our <a href="https://discord.gg/5NTJTPwSaH"> Discord </a> server!</span>
+        <img id="closenotice" onclick="document.getElementById('notice').remove()" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==">
+    </div>
     <div class="contents">
         <div class="topbar">
             <!-- <a href="https://www.cattiesworld.nl">
@@ -124,8 +131,8 @@
                 </p>
                  <a href="history.html">View older articles</a>
                 <br><br>
-                <div class="big">Stats</div><br><br>
-                <iframe width="420" height="315" src="https://stats.cattiesworld.nl" style="border:0px solid black; border-radius: 7px;"></iframe><br>
+                <!-- <div class="big">Stats</div><br><br>
+                <iframe width="420" height="315" src="https://stats.cattiesworld.nl" style="border:0px solid black; border-radius: 7px;"></iframe><br> -->
                 <!-- The entire project is open-source and the .pmp files can be found on my github <a href="https://github.com/GreedyAllay/CattiesWorld">here</a>. I would like you ask you to not run or host
                 any of the server software, unless you use a different server than I did. Opening these project files can be done here: <a>Penguinmod</a> -->
                 <div class="big">Trailer</div><br><br>
@@ -177,12 +184,5 @@
         </div>
         ©2025 Greedy Allay
     </div>
-<script>
-      function hideDiv() {
-    document.getElementById("myDiv").style.display = "none";
-  }
-</script>
-<!-- this kind of fucks with googles search fuckery and shows a shit ton of images -->
-
 </body>
 </html>

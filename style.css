@@ -13,6 +13,10 @@
   width: 200px;
   margin: 10px;
 }
+a {
+  color:rgb(255, 167, 167);
+  text-decoration:none;
+}
 .poll-iframe {
   position: absolute;
   top: 100px; /* Adjust as needed */
@@ -44,12 +48,17 @@ body {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .topbar {
   background-color: rgb(221, 221, 221);
   padding: 0px;
   text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
 }
 
 .title {
@@ -144,4 +153,34 @@ body {
 }
 .bold {
   font-weight: bold;
+}
+
+#notice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #b74848;
+  color:white;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#closenotice {
+  margin-left: auto;
+  margin-right: 7px;
+  background-color: rgba(255, 255, 255, 0.249);
+  padding: 10px;
+  border-radius: 50px;
+  width: 15px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+#closenotice:hover {
+  transform: rotate(45deg) scale(1.1);
+  transition: .05s;
+}
+#noticetext {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
 }
