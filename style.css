@@ -14,8 +14,9 @@
   margin: 10px;
 }
 a {
-  color:rgb(255, 167, 167);
+  color:rgb(58, 70, 204);
   text-decoration:none;
+  font-weight: bold;
 }
 .poll-iframe {
   position: absolute;

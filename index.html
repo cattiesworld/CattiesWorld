@@ -43,13 +43,20 @@
         }
         let seenNotice = document.getElementById('noticetext').textContent
         alert(seenNotice)
+
+addEventListener('keypress', (e) => {
+            console.log(e.keyCode)
+            if(e.keyCode == '13') {
+                document.getElementsByName('game')[0].requestFullscreen();
+            }
+        })
     </script>
 </head>
 
 
 <body>
     <div id="notice">
-        <span id="noticetext">Cattie's World 2 is in development! Follow it on our <a href="https://discord.gg/5NTJTPwSaH"> Discord </a> server!</span>
+        <span id="noticetext">Want to test out new beta versions? You might be interested in <a href="https://beta.cattiesworld.nl"> THIS </a></span>
         <img id="closenotice" onclick="document.getElementById('notice').remove()" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==">
     </div>
     <div class="contents">
@@ -63,10 +70,10 @@
             </a><a href="community.html" class="">
             <button class="topbarbutton">Comments</button>
         </a> r-->
-<p class="title">Cattie's World <span class="version">v0.1.50 Pre-Release</span></p>
+<p class="title">Cattie's World <span class="version">v2.177 (Experimental)</span></p>
 </div> 
 <div class="background">
-    <iframe class="game" src="game.html"></iframe>
+    <iframe class="game" src="https://beta.cattiesworld.nl/versions/CW2.177.html"></iframe>
      <div id="myDiv" class="poll-iframe">
   Click to hide
   <button onclick="hideDiv()">
@@ -74,6 +81,7 @@
   </button>
   <iframe class="poll-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="20%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
+Press enter for fullscreen
             <!-- <iframe class="game" src="https://en.wikipedia.org/wiki/Main_Page"></iframe> -->
              <!-- this is for when i change the page every time i reload it wont lag the fuck out of my shitty pc -->
             <div class="controls">
@@ -184,5 +192,7 @@
         </div>
         ©2025 Greedy Allay
     </div>
+    
 </body>
+
 </html>
