@@ -16,8 +16,8 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4307350139896540"
      crossorigin="anonymous"></script>
      <link rel="stylesheet" href="style.css">
-
-     <script>
+</head>
+    <script>
         function toggleSpoiler() {
             let content = document.querySelector(".spoiler-content");
             let button = document.querySelector(".spoiler-button");
@@ -30,9 +30,6 @@
                 button.textContent = "Show a very fun surprise";
             }
         }
-        function hideDiv() {
-            document.getElementById("myDiv").style.display = "none";
-        }
         function toggleVersions() {
             var olderVersions = document.getElementById("older-versions");
             if (olderVersions.style.display === "none") {
@@ -44,50 +41,42 @@
         let seenNotice = document.getElementById('noticetext').textContent
         alert(seenNotice)
 
-addEventListener('keypress', (e) => {
-            console.log(e.keyCode)
-            if(e.keyCode == '13') {
-                document.getElementsByName('game')[0].requestFullscreen();
-            }
-        })
-    </script>
-</head>
+        function fullscreen() {
+            document.getElementsByClassName('game')[0].requestFullscreen();
+        }
 
+        window.addEventListener('resize', () => {
+        console.log('width:', window.innerWidth);
+        });
+    </script>
 
 <body>
     <div id="notice">
         <span id="noticetext">Want to test out new beta versions? You might be interested in <a href="https://beta.cattiesworld.nl"> THIS </a></span>
-        <img id="closenotice" onclick="document.getElementById('notice').remove()" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==">
+        <img id="closenotice" class="close" onclick="document.getElementById('notice').remove()" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==">
+    </div>
+    <div class="pollbox">
+        <div class="polltitlebox">
+            <span class="polltitle">A poll!</span>
+            <img class="close" onclick="document.getElementsByClassName('pollbox')[0].style.display = 'none';" style = 'margin-left: auto;' src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==">
+        </div>
+        
+        <iframe class="poll" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="20%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     <div class="contents">
         <div class="topbar">
-            <!-- <a href="https://www.cattiesworld.nl">
-            <img src="images/logo.png" class="logo"></img>
-        </a>
-            <button class="topbarbutton">Game</button>
-            <a href="history.html" class="">
-            <button class="topbarbutton">News</button>
-            </a><a href="community.html" class="">
-            <button class="topbarbutton">Comments</button>
-        </a> r-->
 <p class="title">Cattie's World <span class="version">v2.177 (Experimental)</span></p>
 </div> 
 <div class="background">
-    <iframe class="game" src="https://beta.cattiesworld.nl/versions/CW2.177.html"></iframe>
-     <div id="myDiv" class="poll-iframe">
-  Click to hide
-  <button onclick="hideDiv()">
-    hide
-  </button>
-  <iframe class="poll-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdQrRMRl-8S8SBpfWMc20_ET-7Kmg9bmDBPDvf-kJgBNjBXbw/viewform?embedded=true" width="20%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
+    <iframe class="game" src="https://beta.cattiesworld.nl/versions/CW2.177.html" allowfullscreen></iframe>
+    <img onclick="fullscreen()" class="fullscreen" src="images/fullscreen.svg"></img>
 <!-- Press enter for fullscreen -->
             <!-- <iframe class="game" src="https://en.wikipedia.org/wiki/Main_Page"></iframe> -->
              <!-- this is for when i change the page every time i reload it wont lag the fuck out of my shitty pc -->
             <div class="controls">
-                <img class="pagestuff" src="images/controls.png" alt="Game Controls">
+                <img class="pagestuff" src="images/newcontrols.svg" alt="Game Controls">
                 <a href="https://discord.gg/5NTJTPwSaH" target="_blank">
-                    <img class="pagestuff" src="images/discord.png" alt="Join our Discord">
+                    <img class="pagestuff" src="images/newdiscord.png" alt="Join our Discord">
                 </a>
                 <a href="https://github.com/GreedyAllay/CattiesWorld/wiki/Cattie's-Wiki" target="_blank">
                     <img class="pagestuff" src="images/help.png" alt="How to play">
@@ -102,12 +91,6 @@ addEventListener('keypress', (e) => {
 
         <div>
             <div class="news">
-                <!-- <p class="big">Download The App!</p><br> -->
-
-                <!-- <h2 class="boldtext">Cattie's World can now be downloaded as an app! This lets you play the game, even when you're offline!
-                    This version does not automatically update! <br>Launching this will show the game in your discord status!
-                </h2>
-                            <a href="https://drive.google.com/file/d/1tCarDFV3Kn_NBgOCjpjBnfuoi-C5UdYt/view?usp=sharing">I will make a proper button soon</a> -->
             <div class="news"><p class="big">News</p><br>
                 <h2>Wait... Seriously?</h2>
                 <p class="text">
@@ -143,28 +126,11 @@ addEventListener('keypress', (e) => {
                 </p>
                  <a href="history.html">View older articles</a>
                 <br><br>
-                <!-- <div class="big">Stats</div><br><br>
-                <iframe width="420" height="315" src="https://stats.cattiesworld.nl" style="border:0px solid black; border-radius: 7px;"></iframe><br> -->
-                <!-- The entire project is open-source and the .pmp files can be found on my github <a href="https://github.com/GreedyAllay/CattiesWorld">here</a>. I would like you ask you to not run or host
-                any of the server software, unless you use a different server than I did. Opening these project files can be done here: <a>Penguinmod</a> -->
                 <div class="big">Trailer</div><br><br>
                 <p><iframe width="420" height="315" src="https://www.youtube.com/embed/G4UG8VqnM_0" title="Cattie's World Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
                 </div>
                 <div class="big">Comments</div><br><br>
                 <iframe src="comments.html" width="1000" height="563" style="border:0px solid black; border-radius: 7px;"></iframe>
-                <!-- <div class="news"><p class="big">Main Versions</p><br> -->
-                <!-- <p class="text">
-                <p class="boldtext">Lightweigh Versions:</p>
-                <a href="Pre-Alpha/CattiesWorldV0.40.html">CattiesWorldV0.40 (no gore, no skins)</a><br>
-                for some reason i feel like the physics in this version feel nicer
-                <br><a href="Pre-Alpha/CattiesWorldV0.54.html">CattiesWorldV0.54 (no gore, only cat skin)</a><br>runs on LITERALLY everything, except for a €40 mp4 player with android (it does run but you can't play)
-                <br><a href="Pre-Alpha/CattiesWorldV0.76.html">CattiesWorldV0.76 (early on gore, only cat skin)</a><br>more modern, level browser does not work in this version anymore for some reason, and some older gore. Still looks good, though, only no decals sadly :(<br>
-                <a href="Alpha/CattiesWorldV0.98.html">CattiesWorldV0.98 (most modern old version, no themes)</a><br>
-                This version is the most stable and works well with online levels and older computers. Might not have all the bells and whistles the normal game has, but it is functional. And smaller in file size.
-                <p class="boldtext">Here some older versions:</p>
-		        <iframe src="versions.html" width="75%" height="300" style="border:0px solid black;"></iframe>
-                </p></div>
-                <br><br> -->
 
                             <div class="news"><p class="big">Modding</p><br>
                 <h2>wait what?</h2>
@@ -196,7 +162,6 @@ addEventListener('keypress', (e) => {
         </div>
         ©2025 Greedy Allay
     </div>
-    
 </body>
 
 </html>

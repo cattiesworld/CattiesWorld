@@ -1,3 +1,7 @@
+html, body {
+  overflow-x:hidden;
+}
+
 .hidden {
   color: rgba(0, 0, 0, 0);
 }
@@ -18,17 +22,6 @@ a {
   text-decoration:none;
   font-weight: bold;
 }
-.poll-iframe {
-  position: absolute;
-  top: 100px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  width: 420px; /* Make the iframe smaller */
-  height: 720px; /* Make the iframe smaller */
-  transform: scale(0.8); /* Scale down the content */
-  transform-origin: top left; /* Make sure the scaling starts from the top-left corner */
-  border: 0px solid pink; /* Optional */
-  border-radius: 0px; /* Optional */
-}
 .logo {
   width: 20%;
   /* padding-right: 100%; */
@@ -46,11 +39,12 @@ body {
 
 .contents {
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 20px auto;
   text-align: center;
   border-radius: 5px;
   overflow: hidden;
+  z-index:2000;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.419);
 }
 
 .topbar {
@@ -97,10 +91,12 @@ body {
 .big {
   font-family: "Archivo Black", sans-serif;
   font-size: 25px;
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(117, 117, 117);
   padding: 20px;
+  color: white;
   display: inline-block;
   width: 50%;
+  border-radius: 20px;
 }
 .news {
   background-color: white;
@@ -151,9 +147,57 @@ body {
 
 .pagestuff {
   max-width: 30%;
+  border-radius: 20px;
+  max-height: 100px;
 }
 .bold {
   font-weight: bold;
+}
+
+.hidepoll {
+  margin-left: auto;
+}
+
+.poll {
+  width: 100%;
+}
+.pollbox::-webkit-scrollbar {
+    display: none;
+}
+
+.pollbox {
+  position: absolute;
+  overflow-x: hidden;
+  margin-left: 80%;
+  pointer-events: all;
+  filter: opacity(.1);
+  transition: 0.1s;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.445);
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-top: 100px;
+  transform: translateX(-50px);
+}
+
+.pollbox iframe {
+  overflow-x: none;
+}
+
+.pollbox:hover {
+  z-index: 0;
+  filter: opacity(1);
+}
+
+.fullscreen {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.429);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 #notice {
@@ -166,7 +210,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#closenotice {
+.close {
   margin-left: auto;
   margin-right: 7px;
   background-color: rgba(255, 255, 255, 0.249);
@@ -176,7 +220,7 @@ body {
   transform: rotate(45deg);
   cursor: pointer;
 }
-#closenotice:hover {
+.close:hover {
   transform: rotate(45deg) scale(1.1);
   transition: .05s;
 }
@@ -184,4 +228,14 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
+}
+
+.polltitlebox {
+  display: flex;
+  flex-direction: row;
+}
+
+.polltitle {
+  color: white;
+  font-size: 25px;
 }
