@@ -159,7 +159,10 @@ body {
 }
 
 .poll {
-  width: 100%;
+  width: 133.33%;  /* 1 / 0.75 */
+  height: 133.33%;
+  transform: scale(0.75);
+  transform-origin: top left;
 }
 .pollbox::-webkit-scrollbar {
     display: none;
@@ -168,9 +171,9 @@ body {
 .pollbox {
   position: absolute;
   overflow-x: hidden;
+  overflow-y:auto;
   margin-left: 80%;
-  pointer-events: all;
-  filter: opacity(.1);
+  filter: opacity(.33);
   transition: 0.1s;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.445);
@@ -178,7 +181,8 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 10px;
   margin-top: 100px;
-  transform: translateX(-50px);
+  height: fit-content;
+  height: 500px;
 }
 
 .pollbox iframe {
@@ -188,6 +192,7 @@ body {
 .pollbox:hover {
   z-index: 0;
   filter: opacity(1);
+  transition: .2s;
 }
 
 .fullscreen {
