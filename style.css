@@ -118,9 +118,10 @@ body {
 .boldtext {
   text-align: left;
   margin: 20px;
-  padding: 20px;
+  padding: 5px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: -10px;
 }
 #older-versions {
   display: none;

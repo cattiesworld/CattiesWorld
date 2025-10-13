@@ -18,6 +18,22 @@
      <link rel="stylesheet" href="style.css">
 </head>
     <script>
+        const versionNumber = "2.182"
+        let changelog
+        fetch("https://beta.cattiesworld.nl/changelog.json")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to fetch changelog");
+            return response.json();
+        })
+        .then(data => {
+            changelog = data;
+            alert()
+            document.getElementById('latest').textContent = changelog[versionNumber]
+            document.getElementById('versionNum').textContent = `Latest Changes (v${versionNumber})`
+        })
+        .catch(error => console.error("Error:", error));
+    </script>
+    <script>
         function toggleSpoiler() {
             let content = document.querySelector(".spoiler-content");
             let button = document.querySelector(".spoiler-button");
@@ -48,6 +64,8 @@
         window.addEventListener('resize', () => {
         console.log('width:', window.innerWidth);
         });
+
+
     </script>
 
 <body>
@@ -69,7 +87,10 @@
 </div> 
 <div class="background">
     <iframe class="game" src="https://beta.cattiesworld.nl/versions/CW2.182.html" allowfullscreen></iframe>
-    <div style="display: flex; flex-direction:row; width: 100%; background-color;">
+    <div id="latestchanges"></div>
+    <span class="boldtext" id="versionNum">Latest Changes</span>
+    <p id="latest">your mom</p>
+    <div style="display: flex; flex-direction:row; width: 100%;">
         <a href="game.html" style="margin-top: auto; margin-bottom: auto; margin-right: auto;">Play Cattie's World 1</a>
         <img onclick="fullscreen()" style="margin-left: auto;" class="fullscreen" src="images/fullscreen.svg">
     </div>
@@ -165,6 +186,8 @@
         </div>
         ©2025 Greedy Allay
     </div>
+
+
 </body>
 
 </html>
