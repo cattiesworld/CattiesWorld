@@ -27,7 +27,6 @@
         })
         .then(data => {
             changelog = data;
-            alert()
             document.getElementById('latest').textContent = changelog[versionNumber]
             document.getElementById('versionNum').textContent = `Latest Changes (v${versionNumber})`
         })
