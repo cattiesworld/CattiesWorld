@@ -186,6 +186,10 @@ body {
   height: 500px;
 }
 
+#disqus_thread {
+  margin: 20px;
+}
+
 .pollbox iframe {
   overflow-x: none;
 }
