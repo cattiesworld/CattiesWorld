@@ -154,6 +154,25 @@
                 <p><iframe width="420" height="315" src="https://www.youtube.com/embed/G4UG8VqnM_0" title="Cattie's World Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
                 </div>
                 <div class="big">Comments</div><br><br>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://catties-world.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <iframe src="comments.html" width="1000" height="563" style="border:0px solid black; border-radius: 7px;"></iframe>
 
                             <div class="news"><p class="big">Modding</p><br>
@@ -187,7 +206,7 @@
         ©2025 Greedy Allay
     </div>
 
-
+<script id="dsq-count-scr" src="//catties-world.disqus.com/count.js" async></script>
 </body>
 
 </html>
