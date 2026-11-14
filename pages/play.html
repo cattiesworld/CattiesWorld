@@ -20,12 +20,21 @@
         justify-content: center;
         flex-wrap: wrap;
     }
+    .fullscreen {
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.429);
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+    }
 </style>
 
-<iframe src="https://beta.cattiesworld.nl" frameborder="0" id="game">
+<iframe src="https://beta.cattiesworld.nl" frameborder="0" id="game" allowfullscreen>
     the game is loading, please wait...
 </iframe>
-
+<img onclick="fullscreen()" style="margin-left: auto;" class="fullscreen" src="resources/fullscreen.svg">
 <div id="bottomcards">
    <img class="bottomcard" src="resources/newercontrols.svg ">
    <img class="bottomcard" src="resources/discord.png" onclick="window.open('https\://discord.gg/5ZAa76x2RT')">

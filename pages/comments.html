@@ -103,22 +103,28 @@
     } else {
         username = getname
     }
-    const gas = 'https://script.google.com/macros/s/AKfycbx9ketAjLTkMTrnFWnl408croGQhcmwvX6JAet7RMKAaUn2aPhoVtQpPOcWSslmYPV5/exec'
+    const link = 'http://localhost:3000/comments'
     let commentList = ''
+
+    console.log("hey gurl")
     loadComments()
+
     function loadComments() {
-    fetch(gas)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        commentList = data
-        renderComments()
-    })
+        fetch(link)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            commentList = data
+            renderComments()
+        })
 }
 
     function renderComments() {
         const commentslist = document.getElementById('comments')
         commentslist.innerHTML = ''
+        commentList.forEach(comment => {
+            console.log(comment)
+        });
         for(let i = 0; i < commentList.length; i++) {
             const comment = document.createElement('div')
             const username1 = document.createElement('span')
@@ -145,7 +151,7 @@
 
             comment.appendChild(usernametop)
             usernametop.appendChild(username1)
-            if(thisComment.username.includes("Greedy Allay")) {
+            if(thisComment.name.includes("Axolay")) {
                 usernametop.appendChild(badge)
             }
             if(thisComment.username == username) {
@@ -166,7 +172,7 @@
     }
 
     function submitComment(name, comment) {
-    fetch(gas, {
+    fetch(link, {
         method: "POST",
         contentType: "application/json",
         body: JSON.stringify({

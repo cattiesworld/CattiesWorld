@@ -31,7 +31,9 @@
     if (params.has('page')) {
         page = params.get('page')
     }
-
+    function fullscreen() {
+        document.getElementById("game").requestFullscreen()
+    }
     function createBackgroundDooDoo() {
         for(let i = 0; i < 100; i++) {
         const circle = document.createElement('div')
